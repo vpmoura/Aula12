@@ -1,0 +1,17 @@
+[
+   {
+       "id": 1,
+       "nome": "Santos",
+       "estadio": "Vila Belmiro",
+       "img": "https://www.pngfind.com/pngs/m/225-2253443_santos-fc-escudo-png-logo-do-santos-png.png",
+       "torcida": 6300000
+   },
+   
+   {
+       "id": 2,
+       "nome": "Flamengo",
+       "estadio": "Maracanã",
+       "img": "https://upload.wikimedia.org/wikipedia/commons/9/93/Flamengo-RJ_%28BRA%29.png",
+       "torcida": 42000000
+   }
+]

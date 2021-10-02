@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consumo de microsserviços</title>
+</head>
+<body>
+
+    <p>Teste</p>
+
+    <input type="button" onclick="getTime()" value="Chamar Aluno">
+    
+    <div id="containerTime">
+
+    </div>
+
+    <script>
+        function getTime(){
+            let request = new XMLHttpRequest();
+            request.open('GET', 'https://demo4124772.mockable.io/aluno')
+
+            let tBody = document.getElementById('itens');
+
+            let container = document.getElementById('containerTime');
+
+            request.onload = () => {
+                if (request.status == 200) {
+                    let response = JSON.parse(request.response);
+                    
+                    response.map(function (item) {
+                        container.innerHTML += `Nome: ${item.nome} <br>`
+                        container.innerHTML += `Idade: ${item.idade} <br>`
+                        container.innerHTML += `Faculdade: ${item.faculdade} <br>`
+                        container.innerHTML += `RM: ${item.rm} <br>`
+                        container.innerHTML += `Curso: ${item.curso} <br>`
+                        container.innerHTML += `Turma: ${item.turma} <br>`
+                        container.innerHTML += `Período: ${item.periodo} <br>`
+                        container.innerHTML += `Github: ${item.github} <br>`
+                    })
+                }
+                else{
+                    console.log("O serviço de backoffice está fora do ar!");
+                }
+            }
+            request.send();
+        }
+    </script>
+</body>
+</html>
