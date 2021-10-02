@@ -1,4 +1,4 @@
 # SpringMVC
 
-## Projeto atualizado para MVC com Java
+## Atividade atualizada para MVC com Java
 
